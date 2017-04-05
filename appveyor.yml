@@ -2,8 +2,8 @@
 build: false
 environment:
   matrix:
-    - PYTHON: "C:/Python27"
     - PYTHON: "C:/Python36"
+    - PYTHON: "C:/Python27"
 init:
   - "ECHO %PYTHON%"
   - ps: "ls C:/Python*"
@@ -18,5 +18,3 @@ test_script:
   - "%PYTHON%/python.exe --version"
   - "%PYTHON%/Scripts/pip.exe --version"
   - "py.test tests/"
-  - "nikola"
-  - "nikola help"
